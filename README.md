@@ -4,7 +4,7 @@
 
 Deribit Trading System is a high-performance order execution and management system that operates through a command-line interface. It uses a WebSocket client to connect to the Deribit TESTNET and manage trading portfolios with advanced functionality.
 
-[![image](https://github.com/user-attachments/assets/4cc060ac-5168-40a2-a2a0-9639cc7855fb)](https://youtu.be/r6a5EGWrwl8?si=QQchaGp8tsG5MC1d)
+[![image](https://github.com/user-attachments/assets/4cc060ac-5168-40a2-a2a0-9639cc7855fb)]
 
 ## Features
 
@@ -103,7 +103,7 @@ sudo apt install cmake gcc libboost-all-dev libssl-dev git libreadline-dev
 
 1. Clone the Repository:
 ```bash
-git clone https://github.com/Venkatesan-M/deribit-trading-system.git
+git clone https://github.com/Synoep/deribit-trading-system.git
 cd deribit-trading-system
 ```
 
