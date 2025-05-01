@@ -1,0 +1,52 @@
+# General
+*.log
+*.out
+*.tmp
+*.swp
+*.bak
+*.dmp
+.DS_Store
+Thumbs.db
+
+# Build Files
+/build/
+*.o
+*.obj
+*.so
+*.dll
+*.a
+*.lib
+*.exe
+
+# CMake Files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# IDE/Editor Specific
+.idea/
+.vscode/
+*.code-workspace
+*.iml
+
+# Generated Files
+*.moc
+*.qrc
+*.rc
+*.res
+ui_*.h
+qrc_*.cpp
+
+# Environment Configuration
+.env
+.env.*
+
+# Logs and Debug Files
+*.log
+*.trace
+
+# Boost Build Files
+bin.v2/
+*.b2
+*.boost-build

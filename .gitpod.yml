@@ -1,0 +1,47 @@
+tasks:
+  # Task to install general utilities
+  - name: utils
+    before: |
+      sudo apt update
+      sudo apt-get install -y tree
+            sudo apt-get install -y \
+        libboost-all-dev \
+        libssl-dev \
+        nlohmann-json3-dev \
+        cmake \
+        g++
+  - command: |
+      echo "Loading environment variables"
+      export DERIBIT_CLIENT_ID=${DERIBIT_CLIENT_ID}
+      export DERIBIT_CLIENT_SECRET=${DERIBIT_CLIENT_SECRET}
+
+  # Task to set up dependencies
+  - name: set-up
+    init: |
+      # Update and install dependencies
+      sudo apt-get update
+      sudo apt-get install -y libboost-all-dev libtbb-dev cmake build-essential git
+      # Install spdlog, fmt, and nlohmann/json
+      git clone https://github.com/gabime/spdlog.git
+      cd spdlog && mkdir build && cd build
+      cmake .. && make -j$(nproc) && sudo make install && cd ../..
+      
+      git clone https://github.com/fmtlib/fmt.git
+      cd fmt && mkdir build && cd build
+      cmake .. && make -j$(nproc) && sudo make install && cd ../..
+
+      git clone https://github.com/nlohmann/json.git
+      cd json && mkdir build && cd build
+      cmake .. && make -j$(nproc) && sudo make install && cd ../..
+
+      clear
+    command: |
+      mkdir -p build
+      cd build
+      cmake ..
+      make -j$(nproc)
+      ./deribit_trader
+
+ports:
+  - port: 8080
+    onOpen: open-preview
