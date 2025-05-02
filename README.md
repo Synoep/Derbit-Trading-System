@@ -4,7 +4,6 @@
 
 Deribit Trading System is a high-performance order execution and management system that operates through a command-line interface. It uses a WebSocket client to connect to the Deribit TESTNET and manage trading portfolios with advanced functionality.
 
-[![image](https://github.com/user-attachments/assets/4cc060ac-5168-40a2-a2a0-9639cc7855fb)]
 
 ## Features
 
